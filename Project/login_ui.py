@@ -7,7 +7,7 @@
 
 
 from PyQt6 import QtCore, QtGui, QtWidgets
-from utils import resource_path
+
 
 class Ui_Login_form(object):
     def setupUi(self, Login_form):
@@ -15,7 +15,7 @@ class Ui_Login_form(object):
         Login_form.resize(520, 366)
         Login_form.setMaximumSize(QtCore.QSize(520, 366))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(resource_path("img/icon.png")), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon.addPixmap(QtGui.QPixmap("img/icon.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         Login_form.setWindowIcon(icon)
         self.widget = QtWidgets.QWidget(parent=Login_form)
         self.widget.setGeometry(QtCore.QRect(0, 0, 520, 366))
@@ -24,7 +24,7 @@ class Ui_Login_form(object):
         self.lbl_pic.setGeometry(QtCore.QRect(0, 0, 260, 366))
         self.lbl_pic.setStyleSheet("")
         self.lbl_pic.setText("")
-        self.lbl_pic.setPixmap(QtGui.QPixmap(resource_path("img/login.png")))
+        self.lbl_pic.setPixmap(QtGui.QPixmap("img/login.png"))
         self.lbl_pic.setObjectName("lbl_pic")
         self.lbl_login = QtWidgets.QLabel(parent=self.widget)
         self.lbl_login.setGeometry(QtCore.QRect(260, 0, 260, 366))
@@ -35,7 +35,7 @@ class Ui_Login_form(object):
         self.lbl_logo.setGeometry(QtCore.QRect(320, 46, 140, 38))
         self.lbl_logo.setStyleSheet("")
         self.lbl_logo.setText("")
-        self.lbl_logo.setPixmap(QtGui.QPixmap(resource_path("img/logo.png")))
+        self.lbl_logo.setPixmap(QtGui.QPixmap("img/logo.png"))
         self.lbl_logo.setObjectName("lbl_logo")
         self.lbl_title = QtWidgets.QLabel(parent=self.widget)
         self.lbl_title.setGeometry(QtCore.QRect(343, 118, 111, 20))

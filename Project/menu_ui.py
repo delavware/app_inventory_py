@@ -7,25 +7,25 @@
 
 
 from PyQt6 import QtCore, QtGui, QtWidgets
-from utils import resource_path
+
 
 class Ui_Main_window(object):
     def setupUi(self, Main_window):
         Main_window.setObjectName("Main_window")
         Main_window.resize(800, 600)
+        Main_window.setMaximumSize(QtCore.QSize(800, 600))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(resource_path("img/icon.png")), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon.addPixmap(QtGui.QPixmap("img/icon.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         Main_window.setWindowIcon(icon)
         self.centralwidget = QtWidgets.QWidget(parent=Main_window)
         self.centralwidget.setObjectName("centralwidget")
+        self.label = QtWidgets.QLabel(parent=self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(0, 0, 800, 600))
+        self.label.setMaximumSize(QtCore.QSize(800, 600))
+        self.label.setText("")
+        self.label.setPixmap(QtGui.QPixmap("img/Dashboard - Inicio.png"))
+        self.label.setObjectName("label")
         Main_window.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(parent=Main_window)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 22))
-        self.menubar.setObjectName("menubar")
-        Main_window.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(parent=Main_window)
-        self.statusbar.setObjectName("statusbar")
-        Main_window.setStatusBar(self.statusbar)
 
         self.retranslateUi(Main_window)
         QtCore.QMetaObject.connectSlotsByName(Main_window)
