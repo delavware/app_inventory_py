@@ -7,6 +7,7 @@
 
 
 from PyQt6 import QtCore, QtGui, QtWidgets
+from utils import resource_path
 
 
 class Ui_Main_window(object):
@@ -15,7 +16,7 @@ class Ui_Main_window(object):
         Main_window.resize(800, 600)
         Main_window.setMaximumSize(QtCore.QSize(800, 600))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("img/icon.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon.addPixmap(QtGui.QPixmap(resource_path("img/icon.png")), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         Main_window.setWindowIcon(icon)
         self.centralwidget = QtWidgets.QWidget(parent=Main_window)
         self.centralwidget.setObjectName("centralwidget")
@@ -23,7 +24,7 @@ class Ui_Main_window(object):
         self.label.setGeometry(QtCore.QRect(0, 0, 800, 600))
         self.label.setMaximumSize(QtCore.QSize(800, 600))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("img/Dashboard - Inicio.png"))
+        self.label.setPixmap(QtGui.QPixmap(resource_path("img/Dashboard - Inicio.png")))
         self.label.setObjectName("label")
         Main_window.setCentralWidget(self.centralwidget)
 
